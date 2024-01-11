@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     30514,        741]
-NotebookOptionsPosition[     28923,        705]
-NotebookOutlinePosition[     29337,        722]
-CellTagsIndexPosition[     29294,        719]
+NotebookDataLength[     48323,       1216]
+NotebookOptionsPosition[     45034,       1149]
+NotebookOutlinePosition[     45448,       1166]
+CellTagsIndexPosition[     45405,       1163]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -383,196 +383,58 @@ Cell[BoxData[
    3.9110751937957044`*^9}, {3.91144538617522*^9, 3.911445413572985*^9}, {
    3.911445466346407*^9, 3.9114455744507036`*^9}, {3.911445636421668*^9, 
    3.911445637790248*^9}, {3.9114457165234227`*^9, 3.911445825379208*^9}},
- CellLabel->"In[31]:=",ExpressionUUID->"0eb8ae61-9755-4901-b00a-f4a54f4c057a"],
+ CellLabel->"In[3]:=",ExpressionUUID->"0eb8ae61-9755-4901-b00a-f4a54f4c057a"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"GetAllElements", "[", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"Ac", ",", "Am", ",", "Axy", ",", " ", "Bxy", ",", " ", "Bc2"}], 
-    "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"1", ",", "1", ",", "1", ",", "2", ",", "2"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"No", ".1"}], ":", " ", "P1"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
+    RowBox[{"Table", "[", 
      RowBox[{
-      RowBox[{"Ac", "^", "2"}], "+", 
-      RowBox[{"Ac", "*", "Am"}]}], ",", 
-     RowBox[{"Ac", "*", "Axy"}], ",", " ", 
-     RowBox[{
-      RowBox[{"Bxy", "*", "Axy"}], "+", 
-      RowBox[{"Bxy", "*", "Ac"}], "+", 
-      RowBox[{"Bxy", "*", "Am"}]}], ",", 
-     RowBox[{
-      RowBox[{"Bc2", "*", "Axy"}], "+", 
-      RowBox[{"Axy", "^", "3"}], "+", 
-      RowBox[{"Am", "*", 
-       RowBox[{"Axy", "^", "2"}]}], "+", 
-      RowBox[{"Bxy", "*", "Axy"}]}], ",", 
-     RowBox[{
-      RowBox[{"Bc2", "*", "Bxy"}], "+", 
-      RowBox[{"Bxy", "^", "2"}]}]}], "}"}], ",", "6"}], "]"}]], "Input",
- CellChangeTimes->{{3.910588393951*^9, 3.910588423045692*^9}, {
-  3.9105983352472477`*^9, 3.9105984809399676`*^9}},
- CellLabel->"In[32]:=",ExpressionUUID->"7a6ed019-44cb-4729-890c-8ed390f5ed5f"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   SuperscriptBox["Bc2", "3"], ",", 
-   RowBox[{
-    SuperscriptBox["Bc2", "2"], " ", "Bxy"}], ",", 
-   RowBox[{
-    SuperscriptBox["Axy", "2"], " ", 
-    SuperscriptBox["Bc2", "2"]}], ",", 
-   RowBox[{
-    SuperscriptBox["Axy", "2"], " ", "Bc2", " ", "Bxy"}], ",", 
-   RowBox[{
-    SuperscriptBox["Axy", "4"], " ", "Bc2"}], ",", 
-   RowBox[{
-    SuperscriptBox["Axy", "4"], " ", "Bxy"}], ",", 
-   SuperscriptBox["Axy", "6"], ",", 
-   RowBox[{"Am", " ", "Axy", " ", 
-    SuperscriptBox["Bc2", "2"]}], ",", 
-   RowBox[{
-    SuperscriptBox["Am", "2"], " ", 
-    SuperscriptBox["Bc2", "2"]}], ",", 
-   RowBox[{
-    SuperscriptBox["Am", "2"], " ", "Bc2", " ", "Bxy"}], ",", 
-   RowBox[{
-    SuperscriptBox["Am", "3"], " ", "Axy", " ", "Bc2"}], ",", 
-   RowBox[{
-    SuperscriptBox["Am", "4"], " ", "Bc2"}], ",", 
-   RowBox[{
-    SuperscriptBox["Am", "4"], " ", "Bxy"}], ",", 
-   RowBox[{
-    SuperscriptBox["Am", "5"], " ", "Axy"}], ",", 
-   SuperscriptBox["Am", "6"], ",", 
-   RowBox[{"Ac", " ", "Am", " ", 
-    SuperscriptBox["Bc2", "2"]}], ",", 
-   RowBox[{"Ac", " ", 
-    SuperscriptBox["Am", "3"], " ", "Bc2"}], ",", 
-   RowBox[{"Ac", " ", 
-    SuperscriptBox["Am", "5"]}]}], "}"}]], "Output",
- CellChangeTimes->{
-  3.9105884233741007`*^9, {3.9105983136664143`*^9, 3.9105983473426714`*^9}, {
-   3.910598464915225*^9, 3.910598481583476*^9}, 3.9106492969738355`*^9, {
-   3.9106502495274425`*^9, 3.9106502666093597`*^9}, 3.910664106809388*^9, 
-   3.9106768316659336`*^9, 3.9110748078134336`*^9, {3.9110753097631907`*^9, 
-   3.9110753197618933`*^9}, 3.9114452633977547`*^9, {3.9114453922876453`*^9, 
-   3.9114454157351294`*^9}, 3.9114454757706795`*^9, 3.911445584711152*^9, 
-   3.911445641206978*^9, 3.9114458340631313`*^9},
- CellLabel->"Out[32]=",ExpressionUUID->"b6d63549-682a-4260-bf62-8ec6f1b95121"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"GetAllElements", "[", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"Ac", ",", "As", ",", "Bxy", ",", " ", "Bc2", ",", "C1"}], "}"}], 
-   ",", 
-   RowBox[{"{", 
-    RowBox[{"1", ",", "1", ",", "2", ",", "2", ",", "3"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"Ac", "^", "2"}], ",", 
-     RowBox[{"Ac", "*", "As"}], ",", 
-     RowBox[{"Ac", "*", "Bxy"}], ",", " ", 
-     RowBox[{"As", "*", 
-      RowBox[{"(", 
-       RowBox[{"Bxy", "+", "Bc2"}], ")"}]}], ",", 
-     RowBox[{
-      RowBox[{"Bc2", "*", "Bxy"}], "+", 
-      RowBox[{"Bxy", "^", "2"}]}], ",", 
-     RowBox[{"Ac", "*", "C1"}], ",", 
-     RowBox[{
-      RowBox[{"(", 
-       RowBox[{"Bxy", "+", "Bc2"}], ")"}], "*", "C1"}], ",", 
-     RowBox[{
-      RowBox[{"C1", "^", "2"}], "+", 
-      RowBox[{"C1", "*", "Bc2", "*", "As"}], "+", 
-      RowBox[{"Bxy", "^", "3"}]}]}], "}"}], ",", "7"}], "]"}]], "Input",
- CellChangeTimes->{{3.910598555364665*^9, 3.910598667742812*^9}, {
-  3.9106768397085934`*^9, 3.91067683984519*^9}},
- CellLabel->"In[33]:=",ExpressionUUID->"a292136f-cd10-478a-bf48-f78ddac01926"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{
-    SuperscriptBox["Bc2", "2"], " ", "C1"}], ",", 
-   RowBox[{"As", " ", 
-    SuperscriptBox["C1", "2"]}], ",", 
-   RowBox[{"As", " ", 
-    SuperscriptBox["Bc2", "3"]}], ",", 
-   RowBox[{
-    SuperscriptBox["As", "3"], " ", 
-    SuperscriptBox["Bc2", "2"]}], ",", 
-   RowBox[{
-    SuperscriptBox["As", "4"], " ", "C1"}], ",", 
-   RowBox[{
-    SuperscriptBox["As", "5"], " ", "Bc2"}], ",", 
-   SuperscriptBox["As", "7"], ",", 
-   RowBox[{"Ac", " ", 
-    SuperscriptBox["Bc2", "3"]}]}], "}"}]], "Output",
- CellChangeTimes->{3.9105986681856146`*^9, 3.9106492988900175`*^9, 
-  3.9106502734947205`*^9, 3.9106641083588424`*^9, 3.9106768404548745`*^9, 
-  3.911074810468297*^9, 3.911075321323865*^9, 3.9114452648650208`*^9, 
-  3.9114454182019405`*^9, 3.911445592676442*^9, 3.911445643034712*^9, 
-  3.9114458356661572`*^9},
- CellLabel->"Out[33]=",ExpressionUUID->"5f0cac4e-ac3f-47f5-be7c-8f9dbb96080a"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Print", "[", 
-  RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"Length", "[", 
-      RowBox[{"GetAllElements", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"A1", ",", "A2", ",", "A3"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"A1", "^", "2"}], ",", 
-          RowBox[{"A2", "^", "2"}], ",", 
-          RowBox[{"A3", "^", "2"}]}], "}"}], ",", "i"}], "]"}], "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"i", ",", "1", ",", "9"}], "}"}]}], "]"}]}], "]"}]], "Input",
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllElements", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"A1", ",", "A2", ",", "A3"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"A1", "^", "2"}], ",", 
+           RowBox[{"A2", "^", "2"}], ",", 
+           RowBox[{"A3", "^", "2"}]}], "}"}], ",", "i"}], "]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.9106642477625585`*^9, 3.910664251503648*^9}, {
   3.9114451849929605`*^9, 3.91144523319092*^9}, {3.911445270103108*^9, 
   3.9114453225510855`*^9}, {3.911445671359741*^9, 3.9114456725224724`*^9}, {
   3.9114458686169095`*^9, 3.911445923956833*^9}, {3.9114460105859823`*^9, 
-  3.9114460114402003`*^9}, {3.911446041442342*^9, 3.911446044881461*^9}},
- CellLabel->"In[43]:=",ExpressionUUID->"3c86c6b7-fb7b-46fa-9461-93cee5042cc9"],
+  3.9114460114402003`*^9}, {3.911446041442342*^9, 3.911446044881461*^9}, {
+  3.9138567303520055`*^9, 3.9138567304651446`*^9}, {3.91392968197281*^9, 
+  3.9139296888517036`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"3c86c6b7-fb7b-46fa-9461-93cee5042cc9"],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"The Dimension of Cohomology is: \"\>", "\[InvisibleSpace]", 
    RowBox[{"{", 
-    RowBox[{
-    "3", ",", "3", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
-      ",", "0"}], "}"}]}],
-  SequenceForm[
-  "The Dimension of Cohomology is: ", {3, 3, 1, 0, 0, 0, 0, 0, 0}],
+    RowBox[{"3", ",", "3", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0"}],
+     "}"}]}],
+  SequenceForm["The Dimension of Cohomology is: ", {3, 3, 1, 0, 0, 0, 0}],
   Editable->False]], "Print",
  CellChangeTimes->{
   3.911445314059822*^9, 3.9114454196889515`*^9, 3.911445490018835*^9, 
    3.911445597048007*^9, 3.911445643998542*^9, 3.9114458386398973`*^9, {
    3.9114458949741216`*^9, 3.911445924601967*^9}, 3.9114460122324476`*^9, 
-   3.9114460464934373`*^9},
+   3.9114460464934373`*^9, 3.913929690267151*^9},
  CellLabel->
-  "\:6b63\:5728\:8ba1\:7b97In[43]:=",ExpressionUUID->"75785ded-0d77-46c9-a8be-\
-4052f993fd14"]
+  "\:6b63\:5728\:8ba1\:7b97In[4]:=",ExpressionUUID->"e9dd2b93-6f7f-4216-8495-\
+d060e756c482"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -602,12 +464,13 @@ Cell[BoxData[
            RowBox[{"A1", "*", "A4"}]}]}], "}"}], ",", "i"}], "]"}], "]"}], 
      ",", 
      RowBox[{"{", 
-      RowBox[{"i", ",", "1", ",", "9"}], "}"}]}], "]"}]}], "]"}]], "Input",
+      RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.9106642477625585`*^9, 3.910664251503648*^9}, {
   3.9114451849929605`*^9, 3.91144523319092*^9}, {3.911445270103108*^9, 
   3.9114453225510855`*^9}, {3.911445671359741*^9, 3.9114456725224724`*^9}, {
-  3.9114458686169095`*^9, 3.911445998659298*^9}},
- CellLabel->"In[41]:=",ExpressionUUID->"ff5f22e5-371e-46d5-a4a5-ad29bc479d41"],
+  3.9114458686169095`*^9, 3.911445998659298*^9}, {3.913856734206464*^9, 
+  3.9138567346136246`*^9}},ExpressionUUID->"ff5f22e5-371e-46d5-a4a5-\
+ad29bc479d41"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -701,6 +564,587 @@ Cell[BoxData[
  CellLabel->
   "\:6b63\:5728\:8ba1\:7b97In[45]:=",ExpressionUUID->"f9e8f433-60a5-4205-98a1-\
 61e3a9bfa7fe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"No", ".16"}], ":", " ", "P222"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllElements", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"A1", ",", "A2", ",", "A3", ",", "A4", ",", "A5"}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"A3", "^", "2"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"A1", "+", "A2"}], ")"}], "*", "A3"}]}], ",", 
+           RowBox[{
+            RowBox[{"A4", "^", "2"}], "+", 
+            RowBox[{"A1", "*", "A4"}]}], ",", 
+           RowBox[{
+            RowBox[{"A5", "^", "2"}], "+", 
+            RowBox[{"A2", "*", "A5"}]}]}], "}"}], ",", "i"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.913803099317829*^9, 3.9138032393007555`*^9}, {
+  3.91380336352398*^9, 3.9138033636639786`*^9}, {3.91380387895914*^9, 
+  3.913803919685732*^9}, {3.9138055115837736`*^9, 3.9138055566967297`*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"fbb8399d-685f-41e4-aacd-88241be06f2b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The Dimension of Cohomology is: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "5", ",", "12", ",", "20", ",", "28", ",", "36", ",", "44", ",", "52"}], 
+    "}"}]}],
+  SequenceForm[
+  "The Dimension of Cohomology is: ", {5, 12, 20, 28, 36, 44, 52}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.913803374996442*^9, 3.9138041433081713`*^9, 
+  3.913805542409414*^9, 3.9138055738882484`*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[24]:=",ExpressionUUID->"14fe3260-e077-4f28-9a19-\
+1e0b60acdb2a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"No", ".47"}], ":", " ", "Pmmm"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllElements", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "A1", ",", "A2", ",", "A3", ",", "A4", ",", "A5", ",", "A6"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"A4", "^", "2"}], "+", 
+            RowBox[{"A1", "*", "A4"}]}], ",", 
+           RowBox[{
+            RowBox[{"A5", "^", "2"}], "+", 
+            RowBox[{"A2", "*", "A5"}]}], ",", 
+           RowBox[{
+            RowBox[{"A6", "^", "2"}], "+", 
+            RowBox[{"A3", "*", "A6"}]}]}], "}"}], ",", "i"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.913803099317829*^9, 3.9138032393007555`*^9}, {
+  3.91380336352398*^9, 3.9138033636639786`*^9}, {3.91380387895914*^9, 
+  3.913803919685732*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"5da2bf05-b598-4e84-8db7-37efee218b11"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The Dimension of Cohomology is: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "6", ",", "18", ",", "38", ",", "66", ",", "102", ",", "146", ",", 
+     "198"}], "}"}]}],
+  SequenceForm[
+  "The Dimension of Cohomology is: ", {6, 18, 38, 66, 102, 146, 198}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.913803374996442*^9, 3.9138041433081713`*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[6]:=",ExpressionUUID->"05365cc6-8a68-403c-ba6f-\
+127595d9935a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"No", ".75"}], ":", " ", "P4"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllElements", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"A1", ",", "A2", ",", "A3", ",", "B1", ",", "B2"}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1", ",", "2", ",", "2"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"A1", "^", "2"}], ",", 
+           RowBox[{"A1", "*", "A2"}], ",", 
+           RowBox[{"A3", "^", "2"}], ",", 
+           RowBox[{"B2", "*", 
+            RowBox[{"(", 
+             RowBox[{"A1", "+", "A2"}], ")"}]}], ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"B1", "+", "B2", "+", 
+              RowBox[{"A2", "^", "2"}]}], ")"}], "*", "A2"}], ",", 
+           RowBox[{
+            RowBox[{"B2", "^", "2"}], "+", 
+            RowBox[{"B2", "*", "B1"}]}]}], "}"}], ",", "i"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.913803099317829*^9, 3.9138032393007555`*^9}, {
+  3.91380336352398*^9, 3.9138033636639786`*^9}, {3.913842164564031*^9, 
+  3.9138422238036165`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"4a1e0184-cc45-4606-a976-96c6a15f4a39"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The Dimension of Cohomology is: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "5", ",", "6", ",", "6", ",", "6", ",", "6", ",", "6"}],
+     "}"}]}],
+  SequenceForm["The Dimension of Cohomology is: ", {3, 5, 6, 6, 6, 6, 6}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.913803374996442*^9, {3.9138422163944387`*^9, 3.9138422254375553`*^9}},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[5]:=",ExpressionUUID->"8e54c457-e07b-4611-9da9-\
+52e63d31adfb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"No", ".89"}], ":", " ", "P422"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllElements", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "A1", ",", "A2", ",", "A3", ",", "A4", ",", "B1", ",", "B2"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "2", ",", "2"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"A1", "^", "2"}], "+", 
+            RowBox[{"A1", "*", "A2"}]}], ",", 
+           RowBox[{"A1", "*", "A3"}], ",", 
+           RowBox[{
+            RowBox[{"A4", "^", "2"}], "+", 
+            RowBox[{"A4", "*", "A2"}]}], ",", 
+           RowBox[{"B2", "*", 
+            RowBox[{"(", 
+             RowBox[{"A1", "+", "A2", "+", "A3"}], ")"}]}], ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"B1", "+", "B2", "+", 
+              RowBox[{"A3", "*", 
+               RowBox[{"(", 
+                RowBox[{"A3", "+", "A2"}], ")"}]}]}], ")"}], "*", "A3"}], ",", 
+           RowBox[{
+            RowBox[{"B2", "^", "2"}], "+", 
+            RowBox[{"B2", "*", "B1"}]}]}], "}"}], ",", "i"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.913803099317829*^9, 3.9138032393007555`*^9}, {
+  3.91380336352398*^9, 3.9138033636639786`*^9}, {3.9139299706280375`*^9, 
+  3.9139299776560383`*^9}},ExpressionUUID->"cabdcb04-ad2d-43b9-bf1e-\
+9eb3e38e1f10"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The Dimension of Cohomology is: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "9", ",", "15", ",", "21", ",", "27", ",", "33", ",", "39"}], 
+    "}"}]}],
+  SequenceForm["The Dimension of Cohomology is: ", {4, 9, 15, 21, 27, 33, 39}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.913803374996442*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[5]:=",ExpressionUUID->"1484a13c-e1aa-4fbe-bf09-\
+3a868dac9cd1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"No", ".111"}], ":", " ", 
+    RowBox[{"P", 
+     RowBox[{"{", "4", "}"}], "2", "m"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllElements", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "A1", ",", "A2", ",", "A3", ",", "A4", ",", "B1", ",", "B2"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "2", ",", "2"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"A1", "*", "A2"}], ",", 
+           RowBox[{"A3", "*", "A2"}], ",", 
+           RowBox[{
+            RowBox[{"A4", "^", "2"}], "+", 
+            RowBox[{"A4", "*", 
+             RowBox[{"(", "A1", ")"}]}]}], ",", 
+           RowBox[{"B2", "*", 
+            RowBox[{"(", 
+             RowBox[{"A1", "+", "A3"}], ")"}]}], ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"B1", "+", "B2", "+", 
+              RowBox[{"A3", "*", 
+               RowBox[{"(", 
+                RowBox[{"A3", "+", "A1"}], ")"}]}]}], ")"}], "*", "A3"}], ",", 
+           RowBox[{
+            RowBox[{"B2", "^", "2"}], "+", 
+            RowBox[{"B2", "*", "B1"}]}]}], "}"}], ",", "i"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.913803099317829*^9, 3.9138032393007555`*^9}, {
+  3.91380336352398*^9, 3.9138033636639786`*^9}, {3.9138568040955687`*^9, 
+  3.9138568945352087`*^9}, {3.9139296093080454`*^9, 3.913929660205716*^9}, {
+  3.913929779762373*^9, 3.9139298263038087`*^9}, {3.9139300111170344`*^9, 
+  3.913930011236034*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"4d8083ab-c16a-48da-8f4e-8b1fcdd53b0c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The Dimension of Cohomology is: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "9", ",", "15", ",", "21", ",", "27", ",", "33", ",", "39"}], 
+    "}"}]}],
+  SequenceForm["The Dimension of Cohomology is: ", {4, 9, 15, 21, 27, 33, 39}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.913803374996442*^9, 3.9138570818513*^9, 
+  3.9139298183746877`*^9, 3.9139300257665462`*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[7]:=",ExpressionUUID->"f1a2391a-fcff-484d-b1b1-\
+02fc6b000ed7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"No", ".112"}], ":", " ", 
+    RowBox[{"P", 
+     RowBox[{"{", "4", "}"}], "2", "c"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllElements", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"A1", ",", "A2", ",", "A3", ",", "B1", ",", "B2"}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1", ",", "2", ",", "2"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"A1", "*", "A2"}], ",", 
+           RowBox[{"A3", "*", "A2"}], ",", 
+           RowBox[{"A2", "^", "2"}], ",", 
+           RowBox[{"B2", "*", 
+            RowBox[{"(", 
+             RowBox[{"A1", "+", "A3"}], ")"}]}], ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"B1", "+", "B2", "+", 
+              RowBox[{"A3", "*", 
+               RowBox[{"(", 
+                RowBox[{"A3", "+", "A1"}], ")"}]}]}], ")"}], "*", "A3"}], ",", 
+           RowBox[{
+            RowBox[{"B2", "^", "2"}], "+", 
+            RowBox[{"B2", "*", "B1"}]}]}], "}"}], ",", "i"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.913803099317829*^9, 3.9138032393007555`*^9}, {
+  3.91380336352398*^9, 3.9138033636639786`*^9}, {3.9138568040955687`*^9, 
+  3.9138568945352087`*^9}, {3.913857086222681*^9, 3.9138571349119043`*^9}, {
+  3.913858632672345*^9, 3.913858635124731*^9}, {3.91392971336411*^9, 
+  3.9139297431857176`*^9}, {3.9139298167006855`*^9, 3.9139298549678497`*^9}, {
+  3.913930032428376*^9, 3.9139300481102276`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"a5c96235-e24f-4ef5-8af5-6ce472c5d1f2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The Dimension of Cohomology is: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "3", ",", "5", ",", "8", ",", "9", ",", "12", ",", "13", ",", "16"}], 
+    "}"}]}],
+  SequenceForm["The Dimension of Cohomology is: ", {3, 5, 8, 9, 12, 13, 16}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.913803374996442*^9, 3.9138572150605183`*^9, 
+  3.9139298564571238`*^9, 3.9139300496922255`*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[8]:=",ExpressionUUID->"bc31c7eb-c840-4d50-98bd-\
+23f2f9cb6ad0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["No. 123-142", "Section",
+ CellChangeTimes->{{3.913930772178975*^9, 
+  3.913930775027973*^9}},ExpressionUUID->"ad94282c-d6e3-49d2-be35-\
+4d4ed36a7f55"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"No", ".123"}], ":", " ", 
+    RowBox[{"P4", "/", "mmm"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllElements", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "A1", ",", "A2", ",", "A3", ",", "A4", ",", "A5", ",", "B1", ",", 
+           "B2"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "2", ",", "2"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"A1", "*", "A2"}], ",", 
+           RowBox[{"A4", "*", "A2"}], ",", 
+           RowBox[{
+            RowBox[{"A5", "^", "2"}], "+", 
+            RowBox[{"A5", "*", 
+             RowBox[{"(", 
+              RowBox[{"A1", "+", "A3"}], ")"}]}]}], ",", 
+           RowBox[{"B2", "*", 
+            RowBox[{"(", 
+             RowBox[{"A1", "+", "A4"}], ")"}]}], ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"B1", "+", "B2", "+", 
+              RowBox[{"A4", "*", 
+               RowBox[{"(", 
+                RowBox[{"A4", "+", "A1"}], ")"}]}]}], ")"}], "*", "A4"}], ",", 
+           RowBox[{
+            RowBox[{"B2", "^", "2"}], "+", 
+            RowBox[{"B2", "*", "B1"}]}]}], "}"}], ",", "i"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.913803099317829*^9, 3.9138032393007555`*^9}, {
+  3.91380336352398*^9, 3.9138033636639786`*^9}, {3.9138568040955687`*^9, 
+  3.9138568945352087`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"edf79b55-be15-49d5-af0c-d11d6c4f65fb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The Dimension of Cohomology is: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "5", ",", "14", ",", "29", ",", "50", ",", "77", ",", "110", ",", "149"}],
+     "}"}]}],
+  SequenceForm[
+  "The Dimension of Cohomology is: ", {5, 14, 29, 50, 77, 110, 149}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.913803374996442*^9, 3.9138570818513*^9, 
+  3.9139310227445455`*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[9]:=",ExpressionUUID->"48a0fc69-b5ee-4be3-bab1-\
+fe22c4b82a8c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"No", ".124"}], ":", " ", 
+    RowBox[{"P4", "/", "mcc"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllElements", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "A1", ",", "A2", ",", "A3", ",", "A4", ",", "B1", ",", "B2"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "2", ",", "2"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"A1", "*", "A2"}], ",", 
+           RowBox[{"A4", "*", "A2"}], ",", 
+           RowBox[{
+            RowBox[{"A2", "^", "2"}], "+", 
+            RowBox[{"A3", "*", 
+             RowBox[{"(", 
+              RowBox[{"A1", "+", "A2"}], ")"}]}]}], ",", 
+           RowBox[{"B2", "*", 
+            RowBox[{"(", 
+             RowBox[{"A1", "+", "A4"}], ")"}]}], ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"B1", "+", "B2", "+", 
+              RowBox[{"A4", "*", 
+               RowBox[{"(", 
+                RowBox[{"A4", "+", "A1"}], ")"}]}]}], ")"}], "*", "A4"}], ",", 
+           RowBox[{
+            RowBox[{"B2", "^", "2"}], "+", 
+            RowBox[{"B2", "*", "B1"}]}]}], "}"}], ",", "i"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.913803099317829*^9, 3.9138032393007555`*^9}, {
+  3.91380336352398*^9, 3.9138033636639786`*^9}, {3.9138568040955687`*^9, 
+  3.9138568945352087`*^9}, {3.913857086222681*^9, 3.9138571349119043`*^9}, {
+  3.913858632672345*^9, 3.913858635124731*^9}, {3.913931620753517*^9, 
+  3.913931622062516*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"20598017-0b2f-4655-8d83-837144a60aec"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The Dimension of Cohomology is: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "9", ",", "15", ",", "21", ",", "27", ",", "33", ",", "39"}], 
+    "}"}]}],
+  SequenceForm["The Dimension of Cohomology is: ", {4, 9, 15, 21, 27, 33, 39}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.913803374996442*^9, 3.9138572150605183`*^9, 
+  3.9139310358785458`*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[10]:=",ExpressionUUID->"b5f36d69-6924-42eb-b801-\
+eae40065e32b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"No", ".125"}], ":", " ", 
+    RowBox[{"P4", "/", "nbm"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The Dimension of Cohomology is: \>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllElements", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "A1", ",", "A2", ",", "A3", ",", "A4", ",", "B1", ",", "B2"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "2", ",", "2"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"A1", "*", "A2"}], ",", 
+           RowBox[{"A1", "*", "A3"}], ",", 
+           RowBox[{
+            RowBox[{"A4", "^", "2"}], "+", 
+            RowBox[{"A4", "*", 
+             RowBox[{"(", 
+              RowBox[{"A1", "+", "A3"}], ")"}]}]}], ",", 
+           RowBox[{"B2", "*", "A3"}], ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"B1", "+", "B2"}], ")"}], "*", 
+            RowBox[{"(", 
+             RowBox[{"A2", "+", "A3"}], ")"}]}], ",", 
+           RowBox[{
+            RowBox[{"B2", "^", "2"}], "+", 
+            RowBox[{"B2", "*", "B1"}]}]}], "}"}], ",", "i"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.913803099317829*^9, 3.9138032393007555`*^9}, {
+  3.91380336352398*^9, 3.9138033636639786`*^9}, {3.9138568040955687`*^9, 
+  3.9138568945352087`*^9}, {3.913857086222681*^9, 3.9138571349119043`*^9}, {
+  3.913858632672345*^9, 3.913858635124731*^9}, {3.9139315894695325`*^9, 
+  3.913931595316536*^9}, {3.9139316289402585`*^9, 3.9139317023399873`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"f096892a-0785-49fc-b349-a653ec27277f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The Dimension of Cohomology is: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "9", ",", "15", ",", "21", ",", "27", ",", "33", ",", "39"}], 
+    "}"}]}],
+  SequenceForm["The Dimension of Cohomology is: ", {4, 9, 15, 21, 27, 33, 39}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.913803374996442*^9, 3.9138572150605183`*^9, 
+  3.9139310358785458`*^9, 3.913931719255954*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[11]:=",ExpressionUUID->"9764d32e-ef4c-468e-a419-\
+d9a43e0f8d60"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1428, 729.75},
@@ -722,26 +1166,57 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 4736, 112, 529, "Input",ExpressionUUID->"9f92eb4c-2d95-4162-a867-4cea82f34d6a"],
-Cell[5297, 134, 12058, 251, 1366, "Input",ExpressionUUID->"0eb8ae61-9755-4901-b00a-f4a54f4c057a"],
+Cell[5297, 134, 12057, 251, 1366, "Input",ExpressionUUID->"0eb8ae61-9755-4901-b00a-f4a54f4c057a"],
 Cell[CellGroupData[{
-Cell[17380, 389, 1090, 29, 28, "Input",ExpressionUUID->"7a6ed019-44cb-4729-890c-8ed390f5ed5f"],
-Cell[18473, 420, 1840, 46, 35, "Output",ExpressionUUID->"b6d63549-682a-4260-bf62-8ec6f1b95121"]
+Cell[17379, 389, 1359, 30, 62, "Input",ExpressionUUID->"3c86c6b7-fb7b-46fa-9461-93cee5042cc9"],
+Cell[18741, 421, 720, 15, 22, "Print",ExpressionUUID->"e9dd2b93-6f7f-4216-8495-d060e756c482"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20350, 471, 1097, 29, 28, "Input",ExpressionUUID->"a292136f-cd10-478a-bf48-f78ddac01926"],
-Cell[21450, 502, 945, 24, 35, "Output",ExpressionUUID->"5f0cac4e-ac3f-47f5-be7c-8f9dbb96080a"]
+Cell[19498, 441, 1277, 31, 43, "Input",ExpressionUUID->"ff5f22e5-371e-46d5-a4a5-ad29bc479d41"],
+Cell[20778, 474, 511, 13, 22, "Print",ExpressionUUID->"b5b2fc1e-932d-4472-bc32-301231e47705"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22432, 531, 1122, 24, 43, "Input",ExpressionUUID->"3c86c6b7-fb7b-46fa-9461-93cee5042cc9"],
-Cell[23557, 557, 734, 17, 22, "Print",ExpressionUUID->"75785ded-0d77-46c9-a8be-4052f993fd14"]
+Cell[21326, 492, 2266, 58, 135, "Input",ExpressionUUID->"7689005d-21f1-4a91-9a47-61157d9d59fa"],
+Cell[23595, 552, 511, 13, 22, "Print",ExpressionUUID->"f9e8f433-60a5-4205-98a1-61e3a9bfa7fe"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24328, 579, 1248, 30, 43, "Input",ExpressionUUID->"ff5f22e5-371e-46d5-a4a5-ad29bc479d41"],
-Cell[25579, 611, 511, 13, 22, "Print",ExpressionUUID->"b5b2fc1e-932d-4472-bc32-301231e47705"]
+Cell[24143, 570, 1442, 36, 62, "Input",ExpressionUUID->"fbb8399d-685f-41e4-aacd-88241be06f2b"],
+Cell[25588, 608, 567, 14, 22, "Print",ExpressionUUID->"14fe3260-e077-4f28-9a19-1e0b60acdb2a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26127, 629, 2266, 58, 164, "Input",ExpressionUUID->"7689005d-21f1-4a91-9a47-61157d9d59fa"],
-Cell[28396, 689, 511, 13, 22, "Print",ExpressionUUID->"f9e8f433-60a5-4205-98a1-61e3a9bfa7fe"]
+Cell[26192, 627, 1365, 36, 62, "Input",ExpressionUUID->"5da2bf05-b598-4e84-8db7-37efee218b11"],
+Cell[27560, 665, 524, 13, 22, "Print",ExpressionUUID->"05365cc6-8a68-403c-ba6f-127595d9935a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28121, 683, 1500, 38, 83, "Input",ExpressionUUID->"4a1e0184-cc45-4606-a976-96c6a15f4a39"],
+Cell[29624, 723, 526, 12, 22, "Print",ExpressionUUID->"8e54c457-e07b-4611-9da9-52e63d31adfb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30187, 740, 1749, 46, 97, "Input",ExpressionUUID->"cabdcb04-ad2d-43b9-bf1e-9eb3e38e1f10"],
+Cell[31939, 788, 488, 12, 22, "Print",ExpressionUUID->"1484a13c-e1aa-4fbe-bf09-3a868dac9cd1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32464, 805, 1930, 49, 97, "Input",ExpressionUUID->"4d8083ab-c16a-48da-8f4e-8b1fcdd53b0c"],
+Cell[34397, 856, 559, 13, 22, "Print",ExpressionUUID->"f1a2391a-fcff-484d-b1b1-02fc6b000ed7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34993, 874, 1882, 45, 97, "Input",ExpressionUUID->"a5c96235-e24f-4ef5-8af5-6ce472c5d1f2"],
+Cell[36878, 921, 559, 13, 22, "Print",ExpressionUUID->"bc31c7eb-c840-4d50-98bd-23f2f9cb6ad0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37474, 939, 156, 3, 67, "Section",ExpressionUUID->"ad94282c-d6e3-49d2-be35-4d4ed36a7f55"],
+Cell[CellGroupData[{
+Cell[37655, 946, 1821, 48, 97, "Input",ExpressionUUID->"edf79b55-be15-49d5-af0c-d11d6c4f65fb"],
+Cell[39479, 996, 544, 14, 22, "Print",ExpressionUUID->"48a0fc69-b5ee-4be3-bab1-fe22c4b82a8c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40060, 1015, 1935, 49, 97, "Input",ExpressionUUID->"20598017-0b2f-4655-8d83-837144a60aec"],
+Cell[41998, 1066, 540, 13, 22, "Print",ExpressionUUID->"b5f36d69-6924-42eb-b801-eae40065e32b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42575, 1084, 1866, 46, 97, "Input",ExpressionUUID->"f096892a-0785-49fc-b349-a653ec27277f"],
+Cell[44444, 1132, 562, 13, 22, "Print",ExpressionUUID->"9764d32e-ef4c-468e-a419-d9a43e0f8d60"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
