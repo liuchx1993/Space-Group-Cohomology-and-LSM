@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    137340,       3031]
-NotebookOptionsPosition[    134355,       2976]
-NotebookOutlinePosition[    134771,       2993]
-CellTagsIndexPosition[    134728,       2990]
+NotebookDataLength[    137916,       3035]
+NotebookOptionsPosition[    134931,       2980]
+NotebookOutlinePosition[    135347,       2997]
+CellTagsIndexPosition[    135304,       2994]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -27,221 +27,225 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"SGProduct", "[", 
    RowBox[{"No_", ",", "g1_List", ",", "g2_List"}], "]"}], ":=", 
-  "\[IndentingNewLine]", 
-  RowBox[{"Module", "[", 
+  RowBox[{"If", "[", 
    RowBox[{
-    RowBox[{"{", 
+    RowBox[{"No", "==", "1"}], ",", 
+    RowBox[{"g1", "+", "g2"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Module", "[", 
      RowBox[{
-     "ToMatrix", ",", "Gens", ",", "\[IndentingNewLine]", "PGGens", ",", 
-      "OhMat3x3Table", ",", "ProductMat", ",", "PGInd", ",", "InversePGGens", 
-      ",", "\[IndentingNewLine]", "TransGens", ",", "TransMat", ",", 
-      "TransInd"}], "}"}], ",", "\[IndentingNewLine]", 
-    RowBox[{"(*", 
-     RowBox[{"Set", " ", "up", " ", "generators"}], "*)"}], 
-    "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"Gens", "=", 
-      RowBox[{"ToExpression", "[", 
-       RowBox[{"StringJoin", "[", 
-        RowBox[{"\"\<SG\>\"", ",", 
-         RowBox[{"ToString", "[", "No", "]"}]}], "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"ToMatrix", "[", 
-       RowBox[{"IGens_", ",", "g_List"}], "]"}], ":=", 
-      RowBox[{"Module", "[", 
+      RowBox[{"{", 
        RowBox[{
-        RowBox[{"{", 
-         RowBox[{"mat", ",", "i"}], "}"}], ",", 
-        RowBox[{
-         RowBox[{"mat", "=", " ", 
-          RowBox[{"IdentityMatrix", "[", 
-           RowBox[{"Length", "[", 
-            RowBox[{"IGens", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}], ";", 
-         RowBox[{"For", "[", 
-          RowBox[{
-           RowBox[{"i", "=", "1"}], ",", 
-           RowBox[{"i", "<=", 
-            RowBox[{"Length", "[", "IGens", "]"}]}], ",", 
-           RowBox[{"i", "++"}], ",", 
-           RowBox[{"mat", " ", "=", " ", 
-            RowBox[{"mat", ".", 
-             RowBox[{"MatrixPower", "[", 
-              RowBox[{
-               RowBox[{"IGens", "[", 
-                RowBox[{"[", "i", "]"}], "]"}], ",", 
-               RowBox[{"g", "[", 
-                RowBox[{"[", "i", "]"}], "]"}]}], "]"}]}]}]}], "]"}], ";", 
-         "mat"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"PGGens", "=", 
-      RowBox[{"Module", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"PGList", ",", "i"}], "}"}], ",", 
-        RowBox[{
-         RowBox[{"PGList", "=", 
-          RowBox[{"{", "}"}]}], ";", 
-         RowBox[{"For", "[", 
-          RowBox[{
-           RowBox[{"i", "=", "1"}], ",", 
-           RowBox[{"i", "<=", 
-            RowBox[{
-             RowBox[{"Length", "[", "Gens", "]"}], "-", "3"}]}], ",", 
-           RowBox[{"i", "++"}], ",", " ", 
-           RowBox[{"AppendTo", "[", 
-            RowBox[{"PGList", ",", 
-             RowBox[{
-              RowBox[{"Gens", "[", 
-               RowBox[{"[", 
-                RowBox[{"i", "+", "3"}], "]"}], "]"}], "[", 
-              RowBox[{"[", 
-               RowBox[{
-                RowBox[{";;", "3"}], ",", 
-                RowBox[{";;", "3"}]}], "]"}], "]"}]}], "]"}]}], "]"}], ";", 
-         " ", "PGList"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"InversePGGens", "=", 
-      RowBox[{"Module", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"IGList", ",", "i"}], "}"}], ",", 
-        RowBox[{
-         RowBox[{"IGList", "=", 
-          RowBox[{"{", "}"}]}], ";", 
-         RowBox[{"For", "[", 
-          RowBox[{
-           RowBox[{"i", "=", "1"}], ",", 
-           RowBox[{"i", "<=", 
-            RowBox[{
-             RowBox[{"Length", "[", "Gens", "]"}], "-", "3"}]}], ",", 
-           RowBox[{"i", "++"}], ",", " ", 
-           RowBox[{"AppendTo", "[", 
-            RowBox[{"IGList", ",", 
-             RowBox[{"Inverse", "[", 
-              RowBox[{"Gens", "[", 
-               RowBox[{"[", 
-                RowBox[{"i", "+", "3"}], "]"}], "]"}], "]"}]}], "]"}]}], 
-          "]"}], ";", " ", "IGList"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"TransGens", " ", "=", " ", 
-      RowBox[{"Transpose", "[", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"Gens", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "[", 
-          RowBox[{"[", 
-           RowBox[{
-            RowBox[{"1", ";;", "3"}], ",", "4"}], "]"}], "]"}], ",", 
-         RowBox[{
-          RowBox[{"Gens", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "[", 
-          RowBox[{"[", 
-           RowBox[{
-            RowBox[{"1", ";;", "3"}], ",", "4"}], "]"}], "]"}], ",", 
-         RowBox[{
-          RowBox[{"Gens", "[", 
-           RowBox[{"[", "3", "]"}], "]"}], "[", 
-          RowBox[{"[", 
-           RowBox[{
-            RowBox[{"1", ";;", "3"}], ",", "4"}], "]"}], "]"}]}], "}"}], 
-       "]"}]}], ";", "\[IndentingNewLine]", " ", 
-     RowBox[{"(*", 
+       "ToMatrix", ",", "Gens", ",", "\[IndentingNewLine]", "PGGens", ",", 
+        "OhMat3x3Table", ",", "ProductMat", ",", "PGInd", ",", 
+        "InversePGGens", ",", "\[IndentingNewLine]", "TransGens", ",", 
+        "TransMat", ",", "TransInd"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"Set", " ", "up", " ", "generators"}], "*)"}], 
+      "\[IndentingNewLine]", 
       RowBox[{
+       RowBox[{"Gens", "=", 
+        RowBox[{"ToExpression", "[", 
+         RowBox[{"StringJoin", "[", 
+          RowBox[{"\"\<SG\>\"", ",", 
+           RowBox[{"ToString", "[", "No", "]"}]}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{
-       "Find", " ", "PGInd", " ", "by", " ", "exhaustive", " ", "Search"}], 
-       ",", " ", 
-       RowBox[{
-       "find", " ", "TransInd", " ", "by", " ", "Solving", " ", "a", " ", 
-        "linear", " ", "equation"}]}], "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"OhMat3x3Table", "=", 
-      RowBox[{"Module", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"TotalNum", ",", "mat", ",", "TotalList", ",", "i"}], "}"}], 
-        ",", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"TotalNum", "=", 
-          RowBox[{"2", "^", 
-           RowBox[{"Length", "[", "PGGens", "]"}]}]}], ";", 
-         RowBox[{"(*", 
+        RowBox[{"ToMatrix", "[", 
+         RowBox[{"IGens_", ",", "g_List"}], "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"mat", ",", "i"}], "}"}], ",", 
           RowBox[{
-          "For", " ", "now", " ", "we", " ", "do", " ", "not", " ", 
-           "consider", " ", "other", " ", "possibilities"}], "*)"}], 
-         "\[IndentingNewLine]", 
-         RowBox[{"TotalList", " ", "=", " ", 
-          RowBox[{"{", "}"}]}], ";", 
-         RowBox[{"For", "[", 
-          RowBox[{
-           RowBox[{"i", "=", "0"}], ",", 
-           RowBox[{"i", "<", "TotalNum"}], ",", 
-           RowBox[{"i", "++"}], ",", 
-           RowBox[{
-            RowBox[{"mat", " ", "=", " ", 
-             RowBox[{"ToMatrix", "[", 
-              RowBox[{"PGGens", ",", 
-               RowBox[{"PadLeft", "[", 
+           RowBox[{"mat", "=", " ", 
+            RowBox[{"IdentityMatrix", "[", 
+             RowBox[{"Length", "[", 
+              RowBox[{"IGens", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}], ";", 
+           RowBox[{"For", "[", 
+            RowBox[{
+             RowBox[{"i", "=", "1"}], ",", 
+             RowBox[{"i", "<=", 
+              RowBox[{"Length", "[", "IGens", "]"}]}], ",", 
+             RowBox[{"i", "++"}], ",", 
+             RowBox[{"mat", " ", "=", " ", 
+              RowBox[{"mat", ".", 
+               RowBox[{"MatrixPower", "[", 
                 RowBox[{
-                 RowBox[{"IntegerDigits", "[", 
-                  RowBox[{"i", ",", "2"}], "]"}], ",", 
-                 RowBox[{"Length", "[", "PGGens", "]"}]}], "]"}]}], "]"}]}], 
-            ";", 
-            RowBox[{"AppendTo", "[", 
-             RowBox[{"TotalList", ",", "mat"}], "]"}], ";"}]}], "]"}], ";", 
-         "TotalList"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"ProductMat", " ", "=", " ", 
-      RowBox[{
-       RowBox[{"ToMatrix", "[", 
-        RowBox[{"Gens", ",", "g1"}], "]"}], ".", 
-       RowBox[{"ToMatrix", "[", 
-        RowBox[{"Gens", ",", "g2"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"PGInd", "=", 
-      RowBox[{"ToExpression", "[", 
-       RowBox[{"PadLeft", "[", 
-        RowBox[{
-         RowBox[{"Characters", "[", 
-          RowBox[{"IntegerString", "[", 
+                 RowBox[{"IGens", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], ",", 
+                 RowBox[{"g", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}]}], "]"}]}]}]}], "]"}], ";", 
+           "mat"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"PGGens", "=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"PGList", ",", "i"}], "}"}], ",", 
+          RowBox[{
+           RowBox[{"PGList", "=", 
+            RowBox[{"{", "}"}]}], ";", 
+           RowBox[{"For", "[", 
+            RowBox[{
+             RowBox[{"i", "=", "1"}], ",", 
+             RowBox[{"i", "<=", 
+              RowBox[{
+               RowBox[{"Length", "[", "Gens", "]"}], "-", "3"}]}], ",", 
+             RowBox[{"i", "++"}], ",", " ", 
+             RowBox[{"AppendTo", "[", 
+              RowBox[{"PGList", ",", 
+               RowBox[{
+                RowBox[{"Gens", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"i", "+", "3"}], "]"}], "]"}], "[", 
+                RowBox[{"[", 
+                 RowBox[{
+                  RowBox[{";;", "3"}], ",", 
+                  RowBox[{";;", "3"}]}], "]"}], "]"}]}], "]"}]}], "]"}], ";", 
+           " ", "PGList"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"InversePGGens", "=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"IGList", ",", "i"}], "}"}], ",", 
+          RowBox[{
+           RowBox[{"IGList", "=", 
+            RowBox[{"{", "}"}]}], ";", 
+           RowBox[{"For", "[", 
+            RowBox[{
+             RowBox[{"i", "=", "1"}], ",", 
+             RowBox[{"i", "<=", 
+              RowBox[{
+               RowBox[{"Length", "[", "Gens", "]"}], "-", "3"}]}], ",", 
+             RowBox[{"i", "++"}], ",", " ", 
+             RowBox[{"AppendTo", "[", 
+              RowBox[{"IGList", ",", 
+               RowBox[{"Inverse", "[", 
+                RowBox[{"Gens", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"i", "+", "3"}], "]"}], "]"}], "]"}]}], "]"}]}], 
+            "]"}], ";", " ", "IGList"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"TransGens", " ", "=", " ", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{
            RowBox[{
-            RowBox[{"(", 
-             RowBox[{"(", 
+            RowBox[{"Gens", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{
+              RowBox[{"1", ";;", "3"}], ",", "4"}], "]"}], "]"}], ",", 
+           RowBox[{
+            RowBox[{"Gens", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{
+              RowBox[{"1", ";;", "3"}], ",", "4"}], "]"}], "]"}], ",", 
+           RowBox[{
+            RowBox[{"Gens", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{
+              RowBox[{"1", ";;", "3"}], ",", "4"}], "]"}], "]"}]}], "}"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", " ", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{
+         "Find", " ", "PGInd", " ", "by", " ", "exhaustive", " ", "Search"}], 
+         ",", " ", 
+         RowBox[{
+         "find", " ", "TransInd", " ", "by", " ", "Solving", " ", "a", " ", 
+          "linear", " ", "equation"}]}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"OhMat3x3Table", "=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"TotalNum", ",", "mat", ",", "TotalList", ",", "i"}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"TotalNum", "=", 
+            RowBox[{"2", "^", 
+             RowBox[{"Length", "[", "PGGens", "]"}]}]}], ";", 
+           RowBox[{"(*", 
+            RowBox[{
+            "For", " ", "now", " ", "we", " ", "do", " ", "not", " ", 
+             "consider", " ", "other", " ", "possibilities"}], "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"TotalList", " ", "=", " ", 
+            RowBox[{"{", "}"}]}], ";", 
+           RowBox[{"For", "[", 
+            RowBox[{
+             RowBox[{"i", "=", "0"}], ",", 
+             RowBox[{"i", "<", "TotalNum"}], ",", 
+             RowBox[{"i", "++"}], ",", 
+             RowBox[{
+              RowBox[{"mat", " ", "=", " ", 
+               RowBox[{"ToMatrix", "[", 
+                RowBox[{"PGGens", ",", 
+                 RowBox[{"PadLeft", "[", 
+                  RowBox[{
+                   RowBox[{"IntegerDigits", "[", 
+                    RowBox[{"i", ",", "2"}], "]"}], ",", 
+                   RowBox[{"Length", "[", "PGGens", "]"}]}], "]"}]}], "]"}]}],
+               ";", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"TotalList", ",", "mat"}], "]"}], ";"}]}], "]"}], ";", 
+           "TotalList"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ProductMat", " ", "=", " ", 
+        RowBox[{
+         RowBox[{"ToMatrix", "[", 
+          RowBox[{"Gens", ",", "g1"}], "]"}], ".", 
+         RowBox[{"ToMatrix", "[", 
+          RowBox[{"Gens", ",", "g2"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"PGInd", "=", 
+        RowBox[{"ToExpression", "[", 
+         RowBox[{"PadLeft", "[", 
+          RowBox[{
+           RowBox[{"Characters", "[", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
               RowBox[{"(", 
                RowBox[{"(", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"Position", "[", 
-                   RowBox[{"OhMat3x3Table", ",", 
+                RowBox[{"(", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Position", "[", 
+                    RowBox[{"OhMat3x3Table", ",", 
                     RowBox[{"ProductMat", "[", 
                     RowBox[{"[", 
                     RowBox[{
                     RowBox[{";;", "3"}], ",", 
                     RowBox[{";;", "3"}]}], "]"}], "]"}]}], "]"}], "[", 
-                  RowBox[{"[", 
-                   RowBox[{"1", ",", "1"}], "]"}], "]"}], "-", "1"}], ")"}], 
-               ")"}], ")"}], ")"}], ",", "2"}], "]"}], "]"}], ",", 
-         RowBox[{"Length", "[", "PGGens", "]"}]}], "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"TransMat", "=", 
-      RowBox[{"ProductMat", ".", 
-       RowBox[{"ToMatrix", "[", 
-        RowBox[{
-         RowBox[{"Reverse", "[", "InversePGGens", "]"}], ",", 
-         RowBox[{"Reverse", "[", "PGInd", "]"}]}], "]"}]}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"TransInd", "=", 
-      RowBox[{"LinearSolve", "[", 
-       RowBox[{"TransGens", ",", 
-        RowBox[{"TransMat", "[", 
-         RowBox[{"[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "1"}], "]"}], "]"}], "-", "1"}], ")"}], 
+                 ")"}], ")"}], ")"}], ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"Length", "[", "PGGens", "]"}]}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"TransMat", "=", 
+        RowBox[{"ProductMat", ".", 
+         RowBox[{"ToMatrix", "[", 
           RowBox[{
-           RowBox[{"1", ";;", "3"}], ",", "4"}], "]"}], "]"}]}], "]"}]}], ";",
-      "\[IndentingNewLine]", 
-     RowBox[{"Join", "[", 
-      RowBox[{"TransInd", ",", "PGInd"}], "]"}]}]}], "\[IndentingNewLine]", 
-   "]"}]}]], "Input",
+           RowBox[{"Reverse", "[", "InversePGGens", "]"}], ",", 
+           RowBox[{"Reverse", "[", "PGInd", "]"}]}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"TransInd", "=", 
+        RowBox[{"LinearSolve", "[", 
+         RowBox[{"TransGens", ",", 
+          RowBox[{"TransMat", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"1", ";;", "3"}], ",", "4"}], "]"}], "]"}]}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"Join", "[", 
+        RowBox[{"TransInd", ",", "PGInd"}], "]"}]}]}], "\[IndentingNewLine]", 
+     "]"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.9170808566296186`*^9, 3.9170809341702013`*^9}, {
   3.917081023662011*^9, 3.9170810244211025`*^9}, {3.917082328427663*^9, 
-  3.917082333575322*^9}},
+  3.917082333575322*^9}, {3.91708423397795*^9, 3.9170842620505543`*^9}},
  CellLabel->
-  "In[463]:=",ExpressionUUID->"fb59a1bf-7dfd-4c3a-baf9-9a7356680763"],
+  "In[565]:=",ExpressionUUID->"fb59a1bf-7dfd-4c3a-baf9-9a7356680763"],
 
 Cell[BoxData[{
  RowBox[{
@@ -2993,44 +2997,44 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 159, 3, 43, "Input",ExpressionUUID->"eb789b7f-0f28-4023-acc8-2909678ba422"],
-Cell[720, 25, 8449, 218, 692, "Input",ExpressionUUID->"fb59a1bf-7dfd-4c3a-baf9-9a7356680763"],
-Cell[9172, 245, 4913, 129, 388, "Input",ExpressionUUID->"6e4487d7-6fb2-4d9d-95f2-352459a19c26"],
-Cell[14088, 376, 6560, 205, 371, "Input",ExpressionUUID->"d6eb7592-a0ba-4cd4-9d60-98634fa23e34"],
+Cell[720, 25, 9025, 222, 692, "Input",ExpressionUUID->"fb59a1bf-7dfd-4c3a-baf9-9a7356680763"],
+Cell[9748, 249, 4913, 129, 388, "Input",ExpressionUUID->"6e4487d7-6fb2-4d9d-95f2-352459a19c26"],
+Cell[14664, 380, 6560, 205, 371, "Input",ExpressionUUID->"d6eb7592-a0ba-4cd4-9d60-98634fa23e34"],
 Cell[CellGroupData[{
-Cell[20673, 585, 620, 14, 54, "Subsection",ExpressionUUID->"ff5c3841-5750-4e61-a3ad-90633c2dc7c4"],
-Cell[21296, 601, 1374, 41, 81, "Input",ExpressionUUID->"5b278c13-e102-43b4-ac01-e6c9bd7d0ee3"],
-Cell[22673, 644, 63005, 1245, 1847, "Input",ExpressionUUID->"1f33b92e-c642-42c2-8d8d-7e8d153a816b"],
-Cell[85681, 1891, 33877, 640, 1011, "Input",ExpressionUUID->"7dfd770e-715c-422f-a804-ccd024a713f5"],
+Cell[21249, 589, 620, 14, 54, "Subsection",ExpressionUUID->"ff5c3841-5750-4e61-a3ad-90633c2dc7c4"],
+Cell[21872, 605, 1374, 41, 81, "Input",ExpressionUUID->"5b278c13-e102-43b4-ac01-e6c9bd7d0ee3"],
+Cell[23249, 648, 63005, 1245, 1847, "Input",ExpressionUUID->"1f33b92e-c642-42c2-8d8d-7e8d153a816b"],
+Cell[86257, 1895, 33877, 640, 1011, "Input",ExpressionUUID->"7dfd770e-715c-422f-a804-ccd024a713f5"],
 Cell[CellGroupData[{
-Cell[119583, 2535, 328, 6, 28, "Input",ExpressionUUID->"3eb82e21-e184-454e-bdc7-64ead465225b"],
-Cell[119914, 2543, 380, 7, 54, "Output",ExpressionUUID->"bd2b66a7-937e-4ad6-a752-85e8d63b5852"]
+Cell[120159, 2539, 328, 6, 28, "Input",ExpressionUUID->"3eb82e21-e184-454e-bdc7-64ead465225b"],
+Cell[120490, 2547, 380, 7, 54, "Output",ExpressionUUID->"bd2b66a7-937e-4ad6-a752-85e8d63b5852"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[120343, 2556, 671, 15, 38, "Subsection",ExpressionUUID->"375ec6ea-dec2-41fb-9906-daeb9379dcac"],
-Cell[121017, 2573, 2006, 60, 100, "Input",ExpressionUUID->"1c793a3f-432a-4214-b6d6-a782ead5f645"],
-Cell[123026, 2635, 996, 31, 28, "Input",ExpressionUUID->"90cc0d2b-3284-4348-a2d2-f00d88af8cf5"],
+Cell[120919, 2560, 671, 15, 38, "Subsection",ExpressionUUID->"375ec6ea-dec2-41fb-9906-daeb9379dcac"],
+Cell[121593, 2577, 2006, 60, 100, "Input",ExpressionUUID->"1c793a3f-432a-4214-b6d6-a782ead5f645"],
+Cell[123602, 2639, 996, 31, 28, "Input",ExpressionUUID->"90cc0d2b-3284-4348-a2d2-f00d88af8cf5"],
 Cell[CellGroupData[{
-Cell[124047, 2670, 258, 5, 28, "Input",ExpressionUUID->"f794b086-bb52-4ed7-8145-aee1b0c32f71"],
-Cell[124308, 2677, 252, 5, 32, "Output",ExpressionUUID->"9c66e907-f1d5-4f3f-9660-bbd2a38b9151"]
+Cell[124623, 2674, 258, 5, 28, "Input",ExpressionUUID->"f794b086-bb52-4ed7-8145-aee1b0c32f71"],
+Cell[124884, 2681, 252, 5, 32, "Output",ExpressionUUID->"9c66e907-f1d5-4f3f-9660-bbd2a38b9151"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[124609, 2688, 719, 15, 38, "Subsection",ExpressionUUID->"ec51f404-ed24-4d67-b642-9cde6e1dca92"],
-Cell[125331, 2705, 1900, 55, 100, "Input",ExpressionUUID->"1bd62e2e-11b7-49c7-9df9-eb12da68a20f"],
-Cell[127234, 2762, 807, 25, 28, "Input",ExpressionUUID->"d4a3adbe-3141-4aa2-a224-96627c56cb93"],
+Cell[125185, 2692, 719, 15, 38, "Subsection",ExpressionUUID->"ec51f404-ed24-4d67-b642-9cde6e1dca92"],
+Cell[125907, 2709, 1900, 55, 100, "Input",ExpressionUUID->"1bd62e2e-11b7-49c7-9df9-eb12da68a20f"],
+Cell[127810, 2766, 807, 25, 28, "Input",ExpressionUUID->"d4a3adbe-3141-4aa2-a224-96627c56cb93"],
 Cell[CellGroupData[{
-Cell[128066, 2791, 307, 6, 28, "Input",ExpressionUUID->"74baef68-9e3d-423a-a8ae-d2c9845e7f6f"],
-Cell[128376, 2799, 277, 5, 32, "Output",ExpressionUUID->"4fcd12ec-9bde-4535-81a8-8a650f182449"]
+Cell[128642, 2795, 307, 6, 28, "Input",ExpressionUUID->"74baef68-9e3d-423a-a8ae-d2c9845e7f6f"],
+Cell[128952, 2803, 277, 5, 32, "Output",ExpressionUUID->"4fcd12ec-9bde-4535-81a8-8a650f182449"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[128702, 2810, 795, 17, 38, "Subsection",ExpressionUUID->"6503bd92-a98a-475a-904b-89f69886af91"],
-Cell[129500, 2829, 2499, 73, 119, "Input",ExpressionUUID->"6aad6a77-5340-4750-b433-b762668c76b3"],
-Cell[132002, 2904, 1606, 49, 48, "Input",ExpressionUUID->"a340ed21-24ff-4854-b8f4-ce75f015a883"],
+Cell[129278, 2814, 795, 17, 38, "Subsection",ExpressionUUID->"6503bd92-a98a-475a-904b-89f69886af91"],
+Cell[130076, 2833, 2499, 73, 119, "Input",ExpressionUUID->"6aad6a77-5340-4750-b433-b762668c76b3"],
+Cell[132578, 2908, 1606, 49, 48, "Input",ExpressionUUID->"a340ed21-24ff-4854-b8f4-ce75f015a883"],
 Cell[CellGroupData[{
-Cell[133633, 2957, 360, 7, 28, "Input",ExpressionUUID->"e7f86c7e-3917-4ea8-be72-1503093cd490"],
-Cell[133996, 2966, 331, 6, 54, "Output",ExpressionUUID->"034eb1ca-4f1e-400d-a757-99067f98a32c"]
+Cell[134209, 2961, 360, 7, 28, "Input",ExpressionUUID->"e7f86c7e-3917-4ea8-be72-1503093cd490"],
+Cell[134572, 2970, 331, 6, 54, "Output",ExpressionUUID->"034eb1ca-4f1e-400d-a757-99067f98a32c"]
 }, Open  ]]
 }, Closed]]
 }
